@@ -3,20 +3,22 @@ package com.mycompany.lab2p2_joselobo;
 import java.awt.Color;
 
 public class Casa {
-    private int NumeroDeCasa,NumeroDeBloques,NumeroDeBano,NumeroDeCuarto,ancho,largo;
+
+    private int NumeroDeCasa, NumeroDeBloques, NumeroDeBano, NumeroDeCuarto, ancho, largo;
     private Color color;
     String estado;
 
     public Casa() {
     }
 
-    public Casa(int NumeroDeCasa, int NumeroDeBloques, int NumeroDeBano, int NumeroDeCuarto, int ancho, int largo, Color color) {
+    public Casa(int NumeroDeCasa, int NumeroDeBloques, int NumeroDeBano, int NumeroDeCuarto, int ancho, int largo, String estado, Color color) {
         this.NumeroDeCasa = NumeroDeCasa;
         this.NumeroDeBloques = NumeroDeBloques;
         this.NumeroDeBano = NumeroDeBano;
         this.NumeroDeCuarto = NumeroDeCuarto;
         this.ancho = ancho;
         this.largo = largo;
+        this.estado = estado;
         this.color = color;
     }
 
@@ -76,8 +78,16 @@ public class Casa {
         this.color = color;
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
-        return "Casa{" + "NumeroDeCasa=" + NumeroDeCasa + ", NumeroDeBloques=" + NumeroDeBloques + ", NumeroDeBano=" + NumeroDeBano + ", NumeroDeCuarto=" + NumeroDeCuarto + ", ancho=" + ancho + ", largo=" + largo + ", color=" + color + '}';
+        return "Casa[" + "Numero De Casa: " + NumeroDeCasa + " Numero De Bloques:" + NumeroDeBloques + " Numero De Bano: " + NumeroDeBano + " Numero De Cuarto:" + NumeroDeCuarto + " Ancho:" + ancho + " largo:" + largo + " Color: " + color + ']';
     }
 }

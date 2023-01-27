@@ -8,10 +8,11 @@ public class Edificio {
     public Edificio() {
     }
 
-    public Edificio(int NumeroDePisos, int CantDeLocales, String DireccionPorReferencia) {
+    public Edificio(int NumeroDePisos, int CantDeLocales, String DireccionPorReferencia,String estado) {
         this.NumeroDePisos = NumeroDePisos;
         this.CantDeLocales = CantDeLocales;
         this.DireccionPorReferencia = DireccionPorReferencia;
+        this.estado = estado;
     }
 
     
@@ -39,9 +40,17 @@ public class Edificio {
         this.DireccionPorReferencia = DireccionPorReferencia;
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
-        return "Edificio{" + "NumeroDePisos=" + NumeroDePisos + ", CantDeLocales=" + CantDeLocales + ", DireccionPorReferencia=" + DireccionPorReferencia + '}';
+        return "Edificio[" + " Numero De Pisos: " + NumeroDePisos + " Cantidad De Locales:" + CantDeLocales + " Direccion Por Referencia:" + DireccionPorReferencia + ']';
     }
     
 

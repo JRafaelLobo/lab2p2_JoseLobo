@@ -2,25 +2,14 @@ package com.mycompany.lab2p2_joselobo;
 
 public class Solar {
 
-    private String estado;
     private int ancho, largo;
 
     public Solar() {
     }
-    
 
-    public Solar(String estado, int ancho, int largo) {
-        this.estado = estado;
+    public Solar(int ancho, int largo) {
         this.ancho = ancho;
         this.largo = largo;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
     }
 
     public int getAncho() {
@@ -39,9 +28,13 @@ public class Solar {
         this.largo = largo;
     }
 
+    public int getArea() {
+        return largo * ancho;
+    }
+
     @Override
     public String toString() {
-        return "Solar{" + "estado=" + estado + ", ancho=" + ancho + ", largo=" + largo + '}';
+        return "Solar[" + " Estado: " + estado + " Ancho:" + ancho + " Largo: " + largo + ']';
     }
 
 }

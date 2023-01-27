@@ -55,6 +55,13 @@ public class Usuarios {
     }
 
     //Metodos de Administracion
+    public void addAllData(String nombre, int edad, String user, String password) {
+        this.nombre.add(nombre);
+        this.edad.add(edad);
+        this.username.add(user);
+        this.password.add(password);
+    }
+
     public void addNombre(String nombre) {
         this.nombre.add(nombre);
     }
@@ -86,6 +93,7 @@ public class Usuarios {
     public String getPassword(int id) {
         return password.get(id);
     }
+
     public int getEdadID(String n) {
         return edad.indexOf(n);
     }
@@ -110,5 +118,5 @@ public class Usuarios {
     public String toString() {
         return "Usuarios{" + "nombre=" + nombre + ", username=" + username + ", password=" + password + ", edad=" + edad + '}';
     }
-    
+
 }//class
