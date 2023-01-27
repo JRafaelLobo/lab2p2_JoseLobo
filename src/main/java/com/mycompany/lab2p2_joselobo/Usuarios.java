@@ -86,6 +86,21 @@ public class Usuarios {
     public String getPassword(int id) {
         return password.get(id);
     }
+    public int getEdadID(String n) {
+        return edad.indexOf(n);
+    }
+
+    public int getNombreId(String n) {
+        return nombre.indexOf(n);
+    }
+
+    public int getUserId(String n) {
+        return username.indexOf(n);
+    }
+
+    public int getPasswordId(String n) {
+        return password.indexOf(n);
+    }
 
     public int size() {
         return this.username.size();
