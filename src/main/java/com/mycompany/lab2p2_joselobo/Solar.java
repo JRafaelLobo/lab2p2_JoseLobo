@@ -34,7 +34,7 @@ public class Solar {
 
     @Override
     public String toString() {
-        return "Solar[" + " Estado: " + estado + " Ancho:" + ancho + " Largo: " + largo + ']';
+        return "Solar[" + " Ancho:" + ancho + " Largo: " + largo + ']';
     }
 
 }

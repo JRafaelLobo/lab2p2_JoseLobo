@@ -1,21 +1,20 @@
 package com.mycompany.lab2p2_joselobo;
 
 public class Edificio {
-    
+
     private int NumeroDePisos, CantDeLocales;
-    private String DireccionPorReferencia, estado;
+    private String DireccionPorReferencia, estado, dueno;
 
     public Edificio() {
     }
 
-    public Edificio(int NumeroDePisos, int CantDeLocales, String DireccionPorReferencia,String estado) {
+    public Edificio(int NumeroDePisos, int CantDeLocales, String DireccionPorReferencia, String estado) {
         this.NumeroDePisos = NumeroDePisos;
         this.CantDeLocales = CantDeLocales;
         this.DireccionPorReferencia = DireccionPorReferencia;
         this.estado = estado;
     }
 
-    
     public int getNumeroDePisos() {
         return NumeroDePisos;
     }
@@ -50,8 +49,7 @@ public class Edificio {
 
     @Override
     public String toString() {
-        return "Edificio[" + " Numero De Pisos: " + NumeroDePisos + " Cantidad De Locales:" + CantDeLocales + " Direccion Por Referencia:" + DireccionPorReferencia + ']';
+        return "Edificio[" + " Numero De Pisos: " + NumeroDePisos + " Cantidad De Locales:" + CantDeLocales + " Direccion Por Referencia:" + DireccionPorReferencia + "Dueno: " + dueno + ']';
     }
-    
 
 }
