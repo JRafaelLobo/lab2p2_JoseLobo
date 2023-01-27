@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lab2P2_JoseLobo {
     static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) {
-        int opcion=Menu();
+        int opcion=Menu();  
     }
     public static int Menu(){
         System.out.println("""
