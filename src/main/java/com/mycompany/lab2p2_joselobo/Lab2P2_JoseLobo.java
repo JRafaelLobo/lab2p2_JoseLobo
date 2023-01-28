@@ -70,6 +70,7 @@ public class Lab2P2_JoseLobo {
                             }
                         }//case 3
                         case 4 -> {
+                            System.out.println(listacosas);
                             System.out.println("Ingrese el id a modificar: ");
                             int id = leer.nextInt();
                             listacosas.remove(id);
@@ -78,13 +79,38 @@ public class Lab2P2_JoseLobo {
                             for (Object listacosa : listacosas) {
                                 System.out.println(listacosa);
                             }
-                            System.out.println("Elija Una Casa a comprar: ");
-                            
+                            System.out.println("Elija un objecto a comprar: ");
+                            int id = leer.nextInt();
+                            if (listacosas.get(id) instanceof Casa) {
+                                System.out.println("Ingrese la casa a modificar: ");
+                                ((Casa) listacosas.get(id)).setOwner(User);
+                            }
+                            if (listacosas.get(id) instanceof Edificio) {
+                                System.out.println("Ingrese a que modificar: ");
+                                ((Edificio) listacosas.get(id)).setEstado(leer.next());
+                            }
+                            if (listacosas.get(id) instanceof Solar) {
+                                System.out.println("Los Solares no tiene Estado");
+                            }
+
                         }//case 5
                     }//switch registropcion
                 }//case 1
                 case 2 -> {
-
+                    System.out.println(listacosas);
+                    System.out.println("Ingrese el Id para manejar el estado: ");
+                    int id = leer.nextInt();
+                    if (listacosas.get(id) instanceof Casa) {
+                        System.out.println("Ingrese la casa a modificar: ");
+                        ((Casa) listacosas.get(id)).setEstado(leer.next());
+                    }
+                    if (listacosas.get(id) instanceof Edificio) {
+                        System.out.println("Ingrese a que modificar: ");
+                        ((Edificio) listacosas.get(id)).setEstado(leer.next());
+                    }
+                    if (listacosas.get(id) instanceof Solar) {
+                        System.out.println("Los Solares no tiene Estado");
+                    }
                 }//case 2
                 case 3 -> {
                     int usuariopcion = UsuariosMenu();
@@ -130,7 +156,7 @@ public class Lab2P2_JoseLobo {
                     }//switch usuarioOpcion
                 }//case 3
                 case 4 -> {
-
+                    System.out.println("Saliendo...");
                 }//case 4
                 default -> {
                     System.out.println("Opcion Incorrecta");
@@ -217,7 +243,7 @@ public class Lab2P2_JoseLobo {
         int ancho = leer.nextInt();
         System.out.println("Ingrese el largo: ");
         int largo = leer.nextInt();
-        Solar S = new Solar( ancho, largo);
+        Solar S = new Solar(ancho, largo);
         return S;
     }
 }

@@ -3,7 +3,7 @@ package com.mycompany.lab2p2_joselobo;
 public class Edificio {
 
     private int NumeroDePisos, CantDeLocales;
-    private String DireccionPorReferencia, estado, dueno;
+    private String DireccionPorReferencia, estado, Owner;
 
     public Edificio() {
     }
@@ -49,7 +49,7 @@ public class Edificio {
 
     @Override
     public String toString() {
-        return "Edificio[" + " Numero De Pisos: " + NumeroDePisos + " Cantidad De Locales:" + CantDeLocales + " Direccion Por Referencia:" + DireccionPorReferencia + "Dueno: " + dueno + ']';
+        return "Edificio[" + " Numero De Pisos: " + NumeroDePisos + " Cantidad De Locales:" + CantDeLocales + " Direccion Por Referencia:" + DireccionPorReferencia + "Dueno: " + Owner + ']';
     }
 
 }

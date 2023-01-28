@@ -3,6 +3,7 @@ package com.mycompany.lab2p2_joselobo;
 public class Solar {
 
     private int ancho, largo;
+    private String Owner;
 
     public Solar() {
     }
@@ -10,6 +11,14 @@ public class Solar {
     public Solar(int ancho, int largo) {
         this.ancho = ancho;
         this.largo = largo;
+    }
+
+    public String getOwner() {
+        return Owner;
+    }
+
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
     }
 
     public int getAncho() {
@@ -34,7 +43,7 @@ public class Solar {
 
     @Override
     public String toString() {
-        return "Solar[" + " Ancho:" + ancho + " Largo: " + largo + ']';
+        return "Solar[" + " Ancho:" + ancho + " Largo: " + largo + "Owner: " + Owner + ']';
     }
 
 }

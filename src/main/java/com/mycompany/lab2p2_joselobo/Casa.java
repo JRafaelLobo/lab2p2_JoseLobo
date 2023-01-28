@@ -6,7 +6,7 @@ public class Casa {
 
     private int NumeroDeCasa, NumeroDeBloques, NumeroDeBano, NumeroDeCuarto, ancho, largo;
     private Color color;
-    String estado;
+    String estado, Owner;
 
     public Casa() {
     }
@@ -20,6 +20,14 @@ public class Casa {
         this.largo = largo;
         this.estado = estado;
         this.color = color;
+    }
+
+    public String getOwner() {
+        return Owner;
+    }
+
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
     }
 
     public int getNumeroDeCasa() {
@@ -88,6 +96,6 @@ public class Casa {
 
     @Override
     public String toString() {
-        return "Casa[" + "Numero De Casa: " + NumeroDeCasa + " Numero De Bloques:" + NumeroDeBloques + " Numero De Bano: " + NumeroDeBano + " Numero De Cuarto:" + NumeroDeCuarto + " Ancho:" + ancho + " largo:" + largo + " Color: " + color + ']';
+        return "Casa[" + "Numero De Casa: " + NumeroDeCasa + " Numero De Bloques:" + NumeroDeBloques + " Numero De Bano: " + NumeroDeBano + " Numero De Cuarto:" + NumeroDeCuarto + " Ancho:" + ancho + " largo:" + largo + " Color: " + color + " Owner: " + Owner + ']';
     }
 }
