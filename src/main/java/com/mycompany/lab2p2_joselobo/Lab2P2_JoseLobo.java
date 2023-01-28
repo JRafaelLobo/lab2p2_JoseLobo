@@ -7,11 +7,11 @@ import javax.swing.JColorChooser;
 
 public class Lab2P2_JoseLobo {
 
+    static Usuarios U = new Usuarios();
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Usuarios U = new Usuarios();
         ArrayList listacosas = new ArrayList();
         U.addAllData("admin", 0, "admin", "admin1234");
         String User = "admin";
@@ -83,14 +83,14 @@ public class Lab2P2_JoseLobo {
                             int id = leer.nextInt();
                             if (listacosas.get(id) instanceof Casa) {
                                 System.out.println("Ingrese la casa a modificar: ");
-                                ((Casa) listacosas.get(id)).setOwner(User);
+                                ((Casa) listacosas.get(id)).setOwner(BuscarUser_Nombre(User));
                             }
                             if (listacosas.get(id) instanceof Edificio) {
                                 System.out.println("Ingrese a que modificar: ");
-                                ((Edificio) listacosas.get(id)).setEstado(leer.next());
+                                ((Edificio) listacosas.get(id)).setOwner(BuscarUser_Nombre(User));
                             }
                             if (listacosas.get(id) instanceof Solar) {
-                                System.out.println("Los Solares no tiene Estado");
+                                ((Solar) listacosas.get(id)).setOwner(BuscarUser_Nombre(User));
                             }
 
                         }//case 5
@@ -245,5 +245,10 @@ public class Lab2P2_JoseLobo {
         int largo = leer.nextInt();
         Solar S = new Solar(ancho, largo);
         return S;
+    }
+
+    public static String BuscarUser_Nombre(String user) {
+        String temp = U.getNombre(U.getUserId(user));
+        return temp;
     }
 }

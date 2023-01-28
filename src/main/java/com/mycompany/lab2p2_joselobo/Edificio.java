@@ -15,6 +15,14 @@ public class Edificio {
         this.estado = estado;
     }
 
+    public String getOwner() {
+        return Owner;
+    }
+
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public int getNumeroDePisos() {
         return NumeroDePisos;
     }
